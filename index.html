@@ -111,18 +111,18 @@
   <meta name="description" content="Java开发">
 <meta name="keywords" content="Java">
 <meta property="og:type" content="website">
-<meta property="og:title" content="个人博客">
+<meta property="og:title" content="LeifChen&#39;s Blog">
 <meta property="og:url" content="http://leifchen.github.io/index.html">
-<meta property="og:site_name" content="个人博客">
+<meta property="og:site_name" content="LeifChen&#39;s Blog">
 <meta property="og:description" content="Java开发">
 <meta property="og:locale" content="zh-CN">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="个人博客">
+<meta name="twitter:title" content="LeifChen&#39;s Blog">
 <meta name="twitter:description" content="Java开发">
 
 
 
-  <link rel="alternate" href="/atom.xml" title="个人博客" type="application/atom+xml" />
+  <link rel="alternate" href="/atom.xml" title="LeifChen's Blog" type="application/atom+xml" />
 
 
 
@@ -137,7 +137,7 @@
   };
 </script>
 
-  <title>个人博客</title>
+  <title>LeifChen's Blog</title>
   
 
 
@@ -196,7 +196,7 @@
     <div class="custom-logo-site-title">
       <a href="/" class="brand" rel="start">
         <span class="logo-line-before"><i></i></span>
-        <span class="site-title">个人博客</span>
+        <span class="site-title">LeifChen's Blog</span>
         <span class="logo-line-after"><i></i></span>
       </a>
     </div>
@@ -328,7 +328,7 @@
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="个人博客">
+      <meta itemprop="name" content="LeifChen's Blog">
     </span>
 
     
@@ -365,12 +365,24 @@
                 
               
 
-              <time title="创建时间：2018-09-06 20:18:38 / 修改时间：20:31:53" itemprop="dateCreated datePublished" datetime="2018-09-06T20:18:38+08:00">2018-09-06</time>
+              <time title="创建时间：2018-09-06 20:18:38" itemprop="dateCreated datePublished" datetime="2018-09-06T20:18:38+08:00">2018-09-06</time>
             
 
             
               
 
+              
+                
+                <span class="post-meta-divider">|</span>
+                
+
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">更新于</span>
+                
+                <time title="修改时间：2018-09-16 15:06:18" itemprop="dateModified" datetime="2018-09-16T15:06:18+08:00">2018-09-16</time>
               
             
           </span>
@@ -406,8 +418,18 @@
         
           
             <h1 id="使用-Hexo-搭建-Blog"><a href="#使用-Hexo-搭建-Blog" class="headerlink" title="使用 Hexo 搭建 Blog"></a>使用 Hexo 搭建 Blog</h1><h2 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h2><p>进入<a href="https://hexo.io/zh-cn/" target="_blank" rel="noopener">Hexo官网</a>，按照教程提示，依次输入以下命令，便完成了 Hexo 的安装。</p>
-<figure class="highlight cmd"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">$ npm install hexo-cli -g</span><br><span class="line">$ hexo init blog</span><br><span class="line">$ <span class="built_in">cd</span> blog</span><br><span class="line">$ npm install</span><br><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-<h2 id="配置"><a href="#配置" class="headerlink" title="配置"></a>配置</h2>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">npm install hexo-cli -g</span><br><span class="line">hexo init blog</span><br><span class="line"><span class="built_in">cd</span> blog</span><br><span class="line">npm install</span><br><span class="line">hexo server</span><br></pre></td></tr></table></figure>
+<h2 id="配置文件-config-yml"><a href="#配置文件-config-yml" class="headerlink" title="配置文件 _config.yml"></a>配置文件 _config.yml</h2><ul>
+<li>主题</li>
+</ul>
+<figure class="highlight yml"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">theme:</span> <span class="string">next</span></span><br></pre></td></tr></table></figure>
+<p>替换默认主题，本站的主题为 <a href="https://github.com/theme-next/hexo-theme-next" target="_blank" rel="noopener">hexo-theme-next</a></p>
+<ul>
+<li>集成 Github</li>
+</ul>
+<figure class="highlight yml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">deploy:</span></span><br><span class="line"><span class="attr">  type:</span> <span class="string">git</span></span><br><span class="line"><span class="attr">  repository:</span> <span class="string">git@github.com:leifchen/leifchen.github.io.git</span></span><br><span class="line"><span class="attr">  branch:</span> <span class="string">master</span></span><br></pre></td></tr></table></figure>
+<p>需安装插件 <code>npm install hexo-deployer-git --save</code>，<code>hexo d</code> 命令用于发布。</p>
+
           
         
       

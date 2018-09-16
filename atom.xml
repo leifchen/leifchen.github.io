@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>LeifChen&#39;s Blog</title>
+  
+  <subtitle>专注学习与代码</subtitle>
+  <link href="/atom.xml" rel="self"/>
+  
+  <link href="http://leifchen.github.io/"/>
+  <updated>2018-09-16T07:06:18.119Z</updated>
+  <id>http://leifchen.github.io/</id>
+  
+  <author>
+    <name>LeifChen</name>
+    
+  </author>
+  
+  <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>hello-hexo</title>
+    <link href="http://leifchen.github.io/2018/09/06/hello-hexo/"/>
+    <id>http://leifchen.github.io/2018/09/06/hello-hexo/</id>
+    <published>2018-09-06T12:18:38.000Z</published>
+    <updated>2018-09-16T07:06:18.119Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="使用-Hexo-搭建-Blog"><a href="#使用-Hexo-搭建-Blog" class="headerlink" title="使用 Hexo 搭建 Blog"></a>使用 Hexo 搭建 Blog</h1><h2 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h2><p>进入<a href="https://hexo.io/zh-cn/" target="_blank" rel="noopener">Hexo官网</a>，按照教程提示，依次输入以下命令，便完成了 Hexo 的安装。</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">npm install hexo-cli -g</span><br><span class="line">hexo init blog</span><br><span class="line"><span class="built_in">cd</span> blog</span><br><span class="line">npm install</span><br><span class="line">hexo server</span><br></pre></td></tr></table></figure><h2 id="配置文件-config-yml"><a href="#配置文件-config-yml" class="headerlink" title="配置文件 _config.yml"></a>配置文件 _config.yml</h2><ul><li>主题</li></ul><figure class="highlight yml"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">theme:</span> <span class="string">next</span></span><br></pre></td></tr></table></figure><p>替换默认主题，本站的主题为 <a href="https://github.com/theme-next/hexo-theme-next" target="_blank" rel="noopener">hexo-theme-next</a></p><ul><li>集成 Github</li></ul><figure class="highlight yml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">deploy:</span></span><br><span class="line"><span class="attr">  type:</span> <span class="string">git</span></span><br><span class="line"><span class="attr">  repository:</span> <span class="string">git@github.com:leifchen/leifchen.github.io.git</span></span><br><span class="line"><span class="attr">  branch:</span> <span class="string">master</span></span><br></pre></td></tr></table></figure><p>需安装插件 <code>npm install hexo-deployer-git --save</code>，<code>hexo d</code> 命令用于发布。</p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h1 id=&quot;使用-Hexo-搭建-Blog&quot;&gt;&lt;a href=&quot;#使用-Hexo-搭建-Blog&quot; class=&quot;headerlink&quot; title=&quot;使用 Hexo 搭建 Blog&quot;&gt;&lt;/a&gt;使用 Hexo 搭建 Blog&lt;/h1&gt;&lt;h2 id=&quot;安装&quot;&gt;&lt;a href=&quot;
+      
+    
+    </summary>
+    
+    
+      <category term="hexo" scheme="http://leifchen.github.io/tags/hexo/"/>
+    
+  </entry>
+  
+</feed>
