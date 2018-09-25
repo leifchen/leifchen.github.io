@@ -2098,6 +2098,24 @@ pre .keyword {
   border-radius: 100%
 }
 
+.site-author-image {
+  -webkit-transition: -webkit-transform 1s ease-out;
+  -moz-transition: -moz-transform 1s ease-out;
+  -ms-transition: -ms-transform 1s ease-out;
+  transition: transform 1s ease-out
+}
+
+.site-author-image:hover {
+  -webkit-transform: rotateZ(360deg);
+  -moz-transform: rotateZ(360deg);
+  -ms-transform: rotate(360deg);
+  -webkit-transform: rotateZ(360deg);
+  -moz-transform: rotateZ(360deg);
+  -ms-transform: rotateZ(360deg);
+  -o-transform: rotateZ(360deg);
+  transform: rotateZ(360deg)
+}
+
 .site-author-name {
   margin: 0;
   text-align: center;
@@ -2195,7 +2213,7 @@ pre .keyword {
   width: 4px;
   height: 4px;
   border-radius: 50%;
-  background: #2ab6ed
+  background: #26ff83
 }
 
 .links-of-blogroll {
