@@ -3,16 +3,39 @@
   
     
     <entry>
-      <title>Elastic Search 入门</title>
-      <link href="/2018/09/18/ElasticSearch%E5%85%A5%E9%97%A8/"/>
-      <url>/2018/09/18/ElasticSearch%E5%85%A5%E9%97%A8/</url>
+      <title>Hello-线程</title>
+      <link href="/2018/09/26/Hello-%E7%BA%BF%E7%A8%8B/"/>
+      <url>/2018/09/26/Hello-%E7%BA%BF%E7%A8%8B/</url>
       
-        <content type="html"><![CDATA[<p><img src="/images/elastic-search/elasticsearch-logo.jpg" alt="elasticsearch-logo"></p><a id="more"></a><h1 id="Elastic-Search-入门"><a href="#Elastic-Search-入门" class="headerlink" title="Elastic Search 入门"></a>Elastic Search 入门</h1><p>介绍 Elastic Search ，包括安装、插件、配置。</p><h2 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h2><p>到<a href="https://www.elastic.co/cn/products/elasticsearch" target="_blank" rel="noopener">官网</a>下载 ElasticSearch 并解压，然后运行 bin/elasticsearch (or bin\elasticsearch.bat on Windows)，在浏览器打开 <code>http://localhost:9200/</code> 查看是否运行。</p><p><img src="/images/elastic-search/elasticsearch.png" alt="elasticsearch"></p><h2 id="可视化插件"><a href="#可视化插件" class="headerlink" title="可视化插件"></a>可视化插件</h2><p><a href="https://github.com/mobz/elasticsearch-head" target="_blank" rel="noopener">mobz/elasticsearch-head</a></p><p>根据 README 的安装步骤；</p><ol>  <li>git clone git://github.com/mobz/elasticsearch-head.git</li>  <li>cd elasticsearch-head</li>  <li>npm install</li>  <li>npm run start</li>  <li>open <code>http://localhost:9100/</code></li></ol><p>未连接 ElasticSearch 时：</p><p><img src="/images/elastic-search/elasticsearch-head-1.png" alt="elasticsearch-head-1"></p><p>已连接 ElasticSearch 时：</p><p><img src="/images/elastic-search/elasticsearch-head-2.png" alt="elasticsearch-head-2"></p><h2 id="与SpringBoot集成"><a href="#与SpringBoot集成" class="headerlink" title="与SpringBoot集成"></a>与SpringBoot集成</h2><p>通过 Gradle 构建，添加 ElasticSearch 依赖项时，同时需要引进相关插件 transport-netty3-client 依赖项。</p>]]></content>
+        <content type="html"><![CDATA[<p><strong>介绍</strong><br>线程是指程序在执行过程中，能够执行程序代码的一个执行单元。在 Java 语言中，线程有四种状态：运行、就绪、挂起、结束。<br>进程是指一段正在执行的程序。而线程也被成为轻量级的进程，一个进程可以拥有多个线程。<br><a id="more"></a></p><h1 id="线程"><a href="#线程" class="headerlink" title="线程"></a>线程</h1><p>参考视频：</p><ol>  <li><a href="https://www.imooc.com/learn/202" target="_blank" rel="noopener">《深入浅出Java多线程》</a></li>  <li><a href="https://www.imooc.com/learn/312" target="_blank" rel="noopener">《细说多线程之Thread VS Runnable》</a></li></ol><h2 id="Java-标准库——java-lang-Thread"><a href="#Java-标准库——java-lang-Thread" class="headerlink" title="Java 标准库——java.lang.Thread"></a>Java 标准库——java.lang.Thread</h2><p>1.线程的创建</p><ul>  <li><code>Thread()</code></li>  <li><code>Thread(String name)</code></li>  <li><code>Thread(Runnable target)</code></li>  <li><code>Thread(Runnable target, String name)</code></li></ul><p>2.启动线程</p><ul>  <li><code>void start()</code></li></ul><p>3.线程休眠</p><ul>  <li><code>static void sleep (long millis)</code></li>  <li><code>static void sleep (long millis, int nanos)</code></li></ul><p>4.使其他线程等待当前线程终止</p><ul>  <li><code>void join ()</code></li>  <li><code>void join (long millis)</code></li>  <li><code>void join (long millis, int nanos)</code></li></ul><p>5.当前运行线程释放处理器资源</p><ul>  <li><code>static void yield ()</code></li></ul><p>6.返回当前运行的线程引用</p><ul>  <li><code>static Thread currentThread ()</code></li></ul><p>特别注意：线程的终止，应使用退出标志，而不是<code>interrupt()</code></p><h2 id="Thread-VS-Runnable"><a href="#Thread-VS-Runnable" class="headerlink" title="Thread VS Runnable"></a>Thread VS Runnable</h2><ol>  <li>Runnable 方式可以避免 Thread 方式由于 Java 单继承特性带来的缺陷。</li>  <li>Runnable 的代码可以被多个线程共享，适合于多个线程处理同一资源的情况。</li></ol><h2 id="守护线程"><a href="#守护线程" class="headerlink" title="守护线程"></a>守护线程</h2><p>运行在后台，为其他前台线程服务。一旦所有用户线程都结束运行，守护线程会随 JVM 一起结束工作。<br>垃圾回收 GC 就是最常见的守护线程。</p><p>设置守护线程 <code>setDaemon(true)</code> 需在 <code>start()</code> 方法之前调用，否则会抛出 <code>IllegalThreadStateException</code> 异常。</p>]]></content>
       
       
       <categories>
           
-          <category> Elastic Search </category>
+          <category> Hello系列 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> Thread </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    <entry>
+      <title>Hello-ElasticSearch</title>
+      <link href="/2018/09/18/Hello-ElasticSearch/"/>
+      <url>/2018/09/18/Hello-ElasticSearch/</url>
+      
+        <content type="html"><![CDATA[<p><strong>介绍</strong><br>ElasticSearch 是一个基于 Lucene 的搜索服务器。它提供了一个分布式多用户能力的全文搜索引擎，基于 RESTful web 接口。<br><a id="more"></a></p><h1 id="ElasticSearch"><a href="#ElasticSearch" class="headerlink" title="ElasticSearch"></a>ElasticSearch</h1><p>介绍 Elastic Search ，包括安装、插件、配置。</p><h2 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h2><p>到<a href="https://www.elastic.co/cn/products/elasticsearch" target="_blank" rel="noopener">官网</a>下载 ElasticSearch 并解压，然后运行 bin/elasticsearch (or bin\elasticsearch.bat on Windows)，在浏览器打开 <code>http://localhost:9200/</code> 查看是否运行。</p><p><img src="/images/elastic-search/elasticsearch.png" alt="elasticsearch"></p><h2 id="可视化插件"><a href="#可视化插件" class="headerlink" title="可视化插件"></a>可视化插件</h2><p><a href="https://github.com/mobz/elasticsearch-head" target="_blank" rel="noopener">mobz/elasticsearch-head</a></p><p>根据 README 的安装步骤；</p><ol>  <li>git clone git://github.com/mobz/elasticsearch-head.git</li>  <li>cd elasticsearch-head</li>  <li>npm install</li>  <li>npm run start</li>  <li>open <code>http://localhost:9100/</code></li></ol><p>未连接 ElasticSearch 时：</p><p><img src="/images/elastic-search/elasticsearch-head-1.png" alt="elasticsearch-head-1"></p><p>已连接 ElasticSearch 时：</p><p><img src="/images/elastic-search/elasticsearch-head-2.png" alt="elasticsearch-head-2"></p><h2 id="与SpringBoot集成"><a href="#与SpringBoot集成" class="headerlink" title="与SpringBoot集成"></a>与SpringBoot集成</h2><p>通过 Gradle 构建，添加 ElasticSearch 依赖项时，同时需要引进相关插件 transport-netty3-client 依赖项。</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> Hello系列 </category>
           
       </categories>
       
@@ -26,23 +49,23 @@
     </entry>
     
     <entry>
-      <title>Hexo 入门</title>
-      <link href="/2018/09/06/Hexo%E5%85%A5%E9%97%A8/"/>
-      <url>/2018/09/06/Hexo%E5%85%A5%E9%97%A8/</url>
+      <title>Hello-Hexo</title>
+      <link href="/2018/09/06/Hello-Hexo/"/>
+      <url>/2018/09/06/Hello-Hexo/</url>
       
-        <content type="html"><![CDATA[<p><img src="/images/hexo/hexo-logo.png" alt="hexo-logo"></p><a id="more"></a><h1 id="Hexo-入门"><a href="#Hexo-入门" class="headerlink" title="Hexo 入门"></a>Hexo 入门</h1><p>使用 Hexo + GitHub Page 搭建个人博客，记录个人的学习成长。</p><h2 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h2><p>进入<a href="https://hexo.io/zh-cn/" target="_blank" rel="noopener">Hexo官网</a>，按照教程提示，依次输入以下命令，便完成了 Hexo 的安装。</p><figure class="highlight bash">  <table>    <tr>      <td class="gutter">        <pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre>      </td>      <td class="code">        <pre><span class="line">npm install hexo-cli -g</span><br><span class="line">hexo init blog</span><br><span class="line"><span class="built_in">cd</span> blog</span><br><span class="line">npm install</span><br><span class="line">hexo server</span><br></pre>      </td>    </tr>  </table></figure><h2 id="配置文件-config-yml"><a href="#配置文件-config-yml" class="headerlink" title="配置文件 _config.yml"></a>配置文件 _config.yml</h2><ul>  <li>主题</li></ul><figure class="highlight yml">  <table>    <tr>      <td class="gutter">        <pre><span class="line">1</span><br></pre>      </td>      <td class="code">        <pre><span class="line"><span class="attr">theme:</span> <span class="string">next</span></span><br></pre>      </td>    </tr>  </table></figure><p>替换默认主题，本站的主题为 <a href="https://github.com/theme-next/hexo-theme-next" target="_blank" rel="noopener">hexo-theme-next</a></p><ul>  <li>集成 Github</li></ul><figure class="highlight yml">  <table>    <tr>      <td class="gutter">        <pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre>      </td>      <td class="code">        <pre><span class="line"><span class="attr">deploy:</span></span><br><span class="line"><span class="attr">  type:</span> <span class="string">git</span></span><br><span class="line"><span class="attr">  repository:</span> <span class="string">git@github.com:leifchen/leifchen.github.io.git</span></span><br><span class="line"><span class="attr">  branch:</span> <span class="string">master</span></span><br></pre>      </td>    </tr>  </table></figure><p>需安装插件 <code>npm install hexo-deployer-git --save</code>，<code>hexo d</code> 命令用于发布。</p>]]></content>
+        <content type="html"><![CDATA[<p><strong>介绍</strong><br>使用 Hexo + GitHub Page 搭建个人博客，记录个人的学习成长。<br><img src="/images/hexo/hexo-logo.png" alt="hexo-logo"><br><a id="more"></a></p><h1 id="Hexo"><a href="#Hexo" class="headerlink" title="Hexo"></a>Hexo</h1><h2 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h2><p>进入<a href="https://hexo.io/zh-cn/" target="_blank" rel="noopener">Hexo官网</a>，按照教程提示，依次输入以下命令，便完成了 Hexo 的安装。</p><figure class="highlight bash">  <table>    <tr>      <td class="gutter">        <pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre>      </td>      <td class="code">        <pre><span class="line">npm install hexo-cli -g</span><br><span class="line">hexo init blog</span><br><span class="line"><span class="built_in">cd</span> blog</span><br><span class="line">npm install</span><br><span class="line">hexo server</span><br></pre>      </td>    </tr>  </table></figure><h2 id="配置文件-config-yml"><a href="#配置文件-config-yml" class="headerlink" title="配置文件 _config.yml"></a>配置文件 _config.yml</h2><ul>  <li>主题</li></ul><figure class="highlight yml">  <table>    <tr>      <td class="gutter">        <pre><span class="line">1</span><br></pre>      </td>      <td class="code">        <pre><span class="line"><span class="attr">theme:</span> <span class="string">next</span></span><br></pre>      </td>    </tr>  </table></figure><p>替换默认主题，本站的主题为 <a href="https://github.com/theme-next/hexo-theme-next" target="_blank" rel="noopener">hexo-theme-next</a></p><ul>  <li>集成 Github</li></ul><figure class="highlight yml">  <table>    <tr>      <td class="gutter">        <pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre>      </td>      <td class="code">        <pre><span class="line"><span class="attr">deploy:</span></span><br><span class="line"><span class="attr">  type:</span> <span class="string">git</span></span><br><span class="line"><span class="attr">  repository:</span> <span class="string">git@github.com:leifchen/leifchen.github.io.git</span></span><br><span class="line"><span class="attr">  branch:</span> <span class="string">master</span></span><br></pre>      </td>    </tr>  </table></figure><p>需安装插件 <code>npm install hexo-deployer-git --save</code>，<code>hexo d</code> 命令用于发布。</p>]]></content>
       
       
       <categories>
           
-          <category> hexo </category>
+          <category> Hello系列 </category>
           
       </categories>
       
       
         <tags>
             
-            <tag> hexo </tag>
+            <tag> Hexo </tag>
             
         </tags>
       
