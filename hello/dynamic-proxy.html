@@ -58,20 +58,20 @@
         }
       }
   </script>
-  <meta name="description" content="介绍Spring AOP 的底层实现有两种方式：一种是 JDK 动态代理，另一种是 CGLib 动态代理。JDK 动态代理主要涉及 java.lang.reflect 包下边的两个类：Proxy 和 InvocationHandler 。其中 InvocationHandler 是一个接口，可以通过实现该接口定义横切逻辑，并通过反射机制调用目标类的代码，动态地将横切逻辑和业务逻辑编织在一起。JDK">
+  <meta name="description" content="介绍Spring AOP 的底层实现有两种方式：一种是 JDK 动态代理，另一种是 CGLib 动态代理。JDK 动态代理主要涉及 java.lang.reflect 包下边的两个类：Proxy 和 InvocationHandler 。其中 InvocationHandler 是一个接口，可以通过实现该接口定义横切逻辑，并通过反射机制调用目标类的代码，动态地将横切逻辑和业务逻辑编织在一起。 JD">
   <meta name="keywords" content="Java,动态代理">
   <meta property="og:type" content="article">
   <meta property="og:title" content="【Hello】动态代理">
   <meta property="og:url" content="http://leifchen.github.io/hello/dynamic-proxy.html">
   <meta property="og:site_name" content="LeifChen">
-  <meta property="og:description" content="介绍Spring AOP 的底层实现有两种方式：一种是 JDK 动态代理，另一种是 CGLib 动态代理。JDK 动态代理主要涉及 java.lang.reflect 包下边的两个类：Proxy 和 InvocationHandler 。其中 InvocationHandler 是一个接口，可以通过实现该接口定义横切逻辑，并通过反射机制调用目标类的代码，动态地将横切逻辑和业务逻辑编织在一起。JDK">
+  <meta property="og:description" content="介绍Spring AOP 的底层实现有两种方式：一种是 JDK 动态代理，另一种是 CGLib 动态代理。JDK 动态代理主要涉及 java.lang.reflect 包下边的两个类：Proxy 和 InvocationHandler 。其中 InvocationHandler 是一个接口，可以通过实现该接口定义横切逻辑，并通过反射机制调用目标类的代码，动态地将横切逻辑和业务逻辑编织在一起。 JD">
   <meta property="og:locale" content="zh-CN">
   <meta property="og:image" content="http://leifchen.github.io/images/proxy/proxy-structure.jpg">
   <meta property="og:image" content="http://leifchen.github.io/images/proxy/proxy-result.jpg">
-  <meta property="og:updated_time" content="2018-09-27T09:51:37.782Z">
+  <meta property="og:updated_time" content="2018-09-28T03:40:04.275Z">
   <meta name="twitter:card" content="summary">
   <meta name="twitter:title" content="【Hello】动态代理">
-  <meta name="twitter:description" content="介绍Spring AOP 的底层实现有两种方式：一种是 JDK 动态代理，另一种是 CGLib 动态代理。JDK 动态代理主要涉及 java.lang.reflect 包下边的两个类：Proxy 和 InvocationHandler 。其中 InvocationHandler 是一个接口，可以通过实现该接口定义横切逻辑，并通过反射机制调用目标类的代码，动态地将横切逻辑和业务逻辑编织在一起。JDK">
+  <meta name="twitter:description" content="介绍Spring AOP 的底层实现有两种方式：一种是 JDK 动态代理，另一种是 CGLib 动态代理。JDK 动态代理主要涉及 java.lang.reflect 包下边的两个类：Proxy 和 InvocationHandler 。其中 InvocationHandler 是一个接口，可以通过实现该接口定义横切逻辑，并通过反射机制调用目标类的代码，动态地将横切逻辑和业务逻辑编织在一起。 JD">
   <meta name="twitter:image" content="http://leifchen.github.io/images/proxy/proxy-structure.jpg">
   <link rel="alternate" href="/atom.xml" title="LeifChen" type="application/atom+xml">
   <link rel="canonical" href="http://leifchen.github.io/hello/dynamic-proxy.html">
@@ -162,6 +162,20 @@
                     <p>JDK 动态代理的限制，是它只能为接口创建代理实例。对于没有通过接口定义业务方法的类，只能通过 CGLib 创建动态代理实例。</p>
                     <p>CGLib 动态代理采用底层的字节码技术，全称是 Code Generation Library ，CGLib 可以为一个类创建一个子类，在子类中采用方法拦截的技术拦截所有父类方法的调用并顺势织入横切逻辑。<br><a id="more"></a></p>
                     <h1 id="动态代理"><a href="#动态代理" class="headerlink" title="动态代理"></a>动态代理</h1>
+                    <h2 id="Proxy"><a href="#Proxy" class="headerlink" title="Proxy"></a>Proxy</h2>
+                    <p><code>public object invoke(Object obj, Method method, Object[] args)</code></p>
+                    <ul>
+                      <li>obj : 代理对象</li>
+                      <li>method : 代理的方法</li>
+                      <li>args : 代理方法的参数</li>
+                    </ul>
+                    <h2 id="InvocationHandler"><a href="#InvocationHandler" class="headerlink" title="InvocationHandler"></a>InvocationHandler</h2>
+                    <p><code>static Object newProxyInstance(ClassLoader loader, Class&lt;?&gt;[] interfaces, InvocationHandler h)</code></p>
+                    <ul>
+                      <li>loader : 类加载器</li>
+                      <li>interfaces : 实现接口</li>
+                      <li>h : 事件处理器</li>
+                    </ul>
                     <h2 id="JDK-动态代理"><a href="#JDK-动态代理" class="headerlink" title="JDK 动态代理"></a>JDK 动态代理</h2>
                     <p>实现原理：</p>
                     <ul>
@@ -271,7 +285,7 @@
                     <div class="post-tags"><a href="/tags/Java/" rel="tag"># Java</a> <a href="/tags/动态代理/" rel="tag"># 动态代理</a></div>
                     <div class="post-nav">
                       <div class="post-nav-next post-nav-item"><a href="/hello/thread.html" rel="next" title="【Hello】线程"><i class="fa fa-chevron-left"></i> 【Hello】线程</a></div><span class="post-nav-divider"></span>
-                      <div class="post-nav-prev post-nav-item"></div>
+                      <div class="post-nav-prev post-nav-item"><a href="/hello/reflect.html" rel="prev" title="【Hello】反射">【Hello】反射 <i class="fa fa-chevron-right"></i></a></div>
                     </div>
                   </footer>
                 </div>
@@ -295,9 +309,9 @@
                   <p class="site-description motion-element" itemprop="description">Java开发</p>
                 </div>
                 <nav class="site-state motion-element">
-                  <div class="site-state-item site-state-posts"><a href="/archives/"><span class="site-state-item-count">4</span> <span class="site-state-item-name">日志</span></a></div>
+                  <div class="site-state-item site-state-posts"><a href="/archives/"><span class="site-state-item-count">5</span> <span class="site-state-item-name">日志</span></a></div>
                   <div class="site-state-item site-state-categories"><a href="/categories/index.html"><span class="site-state-item-count">1</span> <span class="site-state-item-name">分类</span></a></div>
-                  <div class="site-state-item site-state-tags"><a href="/tags/index.html"><span class="site-state-item-count">6</span> <span class="site-state-item-name">标签</span></a></div>
+                  <div class="site-state-item site-state-tags"><a href="/tags/index.html"><span class="site-state-item-count">8</span> <span class="site-state-item-name">标签</span></a></div>
                 </nav>
                 <div class="feed-link motion-element"><a href="/atom.xml" rel="alternate"><i class="fa fa-rss"></i> RSS</a></div>
                 <div class="links-of-author motion-element"><span class="links-of-author-item"><a href="https://github.com/leifchen" target="_blank" title="GitHub"><i class="fa fa-fw fa-github"></i>GitHub</a> </span><span class="links-of-author-item"><a href="mailto:lefengchen@163.com" target="_blank" title="E-Mail"><i class="fa fa-fw fa-envelope"></i>E-Mail</a></span></div>
@@ -309,6 +323,8 @@
                   <ol class="nav">
                     <li class="nav-item nav-level-1"><a class="nav-link" href="#动态代理"><span class="nav-text">动态代理</span></a>
                       <ol class="nav-child">
+                        <li class="nav-item nav-level-2"><a class="nav-link" href="#Proxy"><span class="nav-text">Proxy</span></a></li>
+                        <li class="nav-item nav-level-2"><a class="nav-link" href="#InvocationHandler"><span class="nav-text">InvocationHandler</span></a></li>
                         <li class="nav-item nav-level-2"><a class="nav-link" href="#JDK-动态代理"><span class="nav-text">JDK 动态代理</span></a></li>
                         <li class="nav-item nav-level-2"><a class="nav-link" href="#CGLib-动态代理"><span class="nav-text">CGLib 动态代理</span></a></li>
                         <li class="nav-item nav-level-2"><a class="nav-link" href="#Spring-AOP-动态代理的方式选择"><span class="nav-text">Spring AOP 动态代理的方式选择</span></a></li>
