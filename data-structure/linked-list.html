@@ -58,25 +58,33 @@
         }
       }
   </script>
-  <meta name="description" content="Java开发">
-  <meta name="keywords" content="Java">
-  <meta property="og:type" content="website">
-  <meta property="og:title" content="LeifChen">
-  <meta property="og:url" content="http://leifchen.github.io/tags/Java/index.html">
+  <meta name="description" content="介绍链表与数组相似，也是一种线性数据结构。链表中的每个结点不仅包含值，还包含链接到下一个结点的引用字段。">
+  <meta name="keywords" content="Java,Linked List">
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="【数据结构】04-链表">
+  <meta property="og:url" content="http://leifchen.github.io/data-structure/linked-list.html">
   <meta property="og:site_name" content="LeifChen">
-  <meta property="og:description" content="Java开发">
+  <meta property="og:description" content="介绍链表与数组相似，也是一种线性数据结构。链表中的每个结点不仅包含值，还包含链接到下一个结点的引用字段。">
   <meta property="og:locale" content="zh-CN">
+  <meta property="og:image" content="http://leifchen.github.io/images/data-structure/linked-list.png">
+  <meta property="og:image" content="http://leifchen.github.io/images/data-structure/linked-list-add1.png">
+  <meta property="og:image" content="http://leifchen.github.io/images/data-structure/linked-list-add2.png">
+  <meta property="og:image" content="http://leifchen.github.io/images/data-structure/linked-list-add3.png">
+  <meta property="og:image" content="http://leifchen.github.io/images/data-structure/linked-list-delete1.png">
+  <meta property="og:image" content="http://leifchen.github.io/images/data-structure/linked-list-delete2.png">
+  <meta property="og:updated_time" content="2018-09-29T13:15:23.588Z">
   <meta name="twitter:card" content="summary">
-  <meta name="twitter:title" content="LeifChen">
-  <meta name="twitter:description" content="Java开发">
+  <meta name="twitter:title" content="【数据结构】04-链表">
+  <meta name="twitter:description" content="介绍链表与数组相似，也是一种线性数据结构。链表中的每个结点不仅包含值，还包含链接到下一个结点的引用字段。">
+  <meta name="twitter:image" content="http://leifchen.github.io/images/data-structure/linked-list.png">
   <link rel="alternate" href="/atom.xml" title="LeifChen" type="application/atom+xml">
-  <link rel="canonical" href="http://leifchen.github.io/tags/Java/">
+  <link rel="canonical" href="http://leifchen.github.io/data-structure/linked-list.html">
   <script type="text/javascript" id="page.configurations">
     CONFIG.page = {
       sidebar: ""
     }
   </script>
-  <title>标签: Java | LeifChen</title><noscript>
+  <title>【数据结构】04-链表 | LeifChen</title><noscript>
     <style type="text/css">
       .sidebar-inner,
       .use-motion .brand,
@@ -106,7 +114,7 @@
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-CN">
-  <div class="container sidebar-position-left">
+  <div class="container sidebar-position-left page-post-detail">
     <div class="headband"></div>
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
       <div class="header-inner">
@@ -121,7 +129,7 @@
           <ul id="menu" class="menu">
             <li class="menu-item menu-item-home"><a href="/" rel="section"><i class="menu-item-icon fa fa-fw fa-home"></i><br>首页</a></li>
             <li class="menu-item menu-item-about"><a href="/about/" rel="section"><i class="menu-item-icon fa fa-fw fa-user"></i><br>关于</a></li>
-            <li class="menu-item menu-item-tags menu-item-active"><a href="/tags/" rel="section"><i class="menu-item-icon fa fa-fw fa-tags"></i><br>标签</a></li>
+            <li class="menu-item menu-item-tags"><a href="/tags/" rel="section"><i class="menu-item-icon fa fa-fw fa-tags"></i><br>标签</a></li>
             <li class="menu-item menu-item-categories"><a href="/categories/" rel="section"><i class="menu-item-icon fa fa-fw fa-th"></i><br>分类</a></li>
             <li class="menu-item menu-item-archives"><a href="/archives/" rel="section"><i class="menu-item-icon fa fa-fw fa-archive"></i><br>归档</a></li>
             <li class="menu-item menu-item-search"><a href="javascript:;" class="popup-trigger"><i class="menu-item-icon fa fa-search fa-fw"></i><br>搜索</a></li>
@@ -141,60 +149,48 @@
       <div class="main-inner">
         <div class="content-wrap">
           <div id="content" class="content">
-            <div class="post-block tag">
-              <div id="posts" class="posts-collapse">
-                <div class="collection-title">
-                  <h1>Java<small>标签</small></h1>
+            <div id="posts" class="posts-expand">
+              <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+                <div class="post-block">
+                  <link itemprop="mainEntityOfPage" href="http://leifchen.github.io/data-structure/linked-list.html"><span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+                    <meta itemprop="name" content="LeifChen">
+                    <meta itemprop="description" content="Java开发">
+                    <meta itemprop="image" content="/images/avatar.gif"></span><span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+                    <meta itemprop="name" content="LeifChen"></span>
+                  <header class="post-header">
+                    <h1 class="post-title" itemprop="name headline">【数据结构】04-链表</h1>
+                    <div class="post-meta"><span class="post-time"><span class="post-meta-item-icon"><i class="fa fa-calendar-o"></i> </span><span class="post-meta-item-text">发表于</span> <time title="创建时间：2018-09-29 20:33:57" itemprop="dateCreated datePublished" datetime="2018-09-29T20:33:57+08:00">2018-09-29</time> </span><span class="post-category"><span class="post-meta-divider">|</span> <span class="post-meta-item-icon"><i class="fa fa-folder-o"></i> </span><span class="post-meta-item-text">分类于</span> <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/data-structure/" itemprop="url" rel="index"><span itemprop="name">【数据结构】</span></a></span> </span><span id="/data-structure/linked-list.html" class="leancloud_visitors" data-flag-title="【数据结构】04-链表"><span class="post-meta-divider">|</span> <span class="post-meta-item-icon"><i class="fa fa-eye"></i> </span><span class="post-meta-item-text">阅读次数：</span> <span class="leancloud-visitors-count"></span></span></div>
+                  </header>
+                  <div class="post-body" itemprop="articleBody">
+                    <p><strong>介绍</strong><br>链表与数组相似，也是一种线性数据结构。链表中的每个结点不仅包含值，还包含链接到下一个结点的引用字段。</p>
+                    <p><img src="/images/data-structure/linked-list.png" alt="Linked List"></p><a id="more"></a>
+                    <h1 id="链表"><a href="#链表" class="headerlink" title="链表"></a>链表</h1>
+                    <h2 id="添加操作"><a href="#添加操作" class="headerlink" title="添加操作"></a>添加操作</h2>
+                    <p>对链表在给定的结点 prev 之后添加新结点 cur</p>
+                    <p><img src="/images/data-structure/linked-list-add1.png" alt="linked-list-add1"></p>
+                    <p>将节点 cur 链接到 prev 的下一个结点 next</p>
+                    <p><img src="/images/data-structure/linked-list-add2.png" alt="linked-list-add2"></p>
+                    <p>将节点 prev 段链接到 cur</p>
+                    <p><img src="/images/data-structure/linked-list-add3.png" alt="linked-list-add3"></p>
+                    <p>与数组不同，不需要将所有元素移动到插入元素之后。因此，链表可以在 O(1) 时间复杂度中将新结点插入到链表中，非常高效。</p>
+                    <h2 id="删除操作"><a href="#删除操作" class="headerlink" title="删除操作"></a>删除操作</h2>
+                    <p>从单链表中删除现有结点 cur</p>
+                    <p><img src="/images/data-structure/linked-list-delete1.png" alt="linked-list-delete1"></p>
+                    <p>先找到 cur 的上一个结点 prev 及其下一个结点 next ，接下来链接 prev 到 cur 的下一个节点 next</p>
+                    <p><img src="/images/data-structure/linked-list-delete2.png" alt="linked-list-delete2"></p>
+                    <p>为找出 prev ，必须从头结点遍历链表，它的平均时间是 O(N)，其中 N 是链表的长度。因此，删除指定结点的时间复杂度将是 O(N)。而空间复杂度为 O(1)，因为只需要常量空间来存储指针。</p>
+                    <h2 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h2>
+                    <p><a href="https://leetcode-cn.com/explore/learn/card/linked-list/193/singly-linked-list/" target="_blank" rel="noopener">LeetCode</a></p>
+                  </div>
+                  <footer class="post-footer">
+                    <div class="post-tags"><a href="/tags/Java/" rel="tag"># Java</a> <a href="/tags/Linked-List/" rel="tag"># Linked List</a></div>
+                    <div class="post-nav">
+                      <div class="post-nav-next post-nav-item"><a href="/data-structure/stack.html" rel="next" title="【数据结构】03-栈"><i class="fa fa-chevron-left"></i> 【数据结构】03-栈</a></div><span class="post-nav-divider"></span>
+                      <div class="post-nav-prev post-nav-item"><a href="/data-structure/binary-tree.html" rel="prev" title="【数据结构】05-二叉树">【数据结构】05-二叉树 <i class="fa fa-chevron-right"></i></a></div>
+                    </div>
+                  </footer>
                 </div>
-                <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-                  <header class="post-header">
-                    <h2 class="post-title"><a class="post-title-link" href="/data-structure/binary-tree.html" itemprop="url"><span itemprop="name">【数据结构】05-二叉树</span></a></h2>
-                    <div class="post-meta"><time class="post-time" itemprop="dateCreated" datetime="2018-09-29T21:23:41+08:00" content="2018-09-29">09-29</time></div>
-                  </header>
-                </article>
-                <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-                  <header class="post-header">
-                    <h2 class="post-title"><a class="post-title-link" href="/data-structure/linked-list.html" itemprop="url"><span itemprop="name">【数据结构】04-链表</span></a></h2>
-                    <div class="post-meta"><time class="post-time" itemprop="dateCreated" datetime="2018-09-29T20:33:57+08:00" content="2018-09-29">09-29</time></div>
-                  </header>
-                </article>
-                <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-                  <header class="post-header">
-                    <h2 class="post-title"><a class="post-title-link" href="/data-structure/stack.html" itemprop="url"><span itemprop="name">【数据结构】03-栈</span></a></h2>
-                    <div class="post-meta"><time class="post-time" itemprop="dateCreated" datetime="2018-09-29T14:08:00+08:00" content="2018-09-29">09-29</time></div>
-                  </header>
-                </article>
-                <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-                  <header class="post-header">
-                    <h2 class="post-title"><a class="post-title-link" href="/data-structure/queue.html" itemprop="url"><span itemprop="name">【数据结构】02-队列</span></a></h2>
-                    <div class="post-meta"><time class="post-time" itemprop="dateCreated" datetime="2018-09-29T14:05:51+08:00" content="2018-09-29">09-29</time></div>
-                  </header>
-                </article>
-                <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-                  <header class="post-header">
-                    <h2 class="post-title"><a class="post-title-link" href="/data-structure/array.html" itemprop="url"><span itemprop="name">【数据结构】01-数组</span></a></h2>
-                    <div class="post-meta"><time class="post-time" itemprop="dateCreated" datetime="2018-09-29T09:47:55+08:00" content="2018-09-29">09-29</time></div>
-                  </header>
-                </article>
-                <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-                  <header class="post-header">
-                    <h2 class="post-title"><a class="post-title-link" href="/hello/reflect.html" itemprop="url"><span itemprop="name">【Hello】反射</span></a></h2>
-                    <div class="post-meta"><time class="post-time" itemprop="dateCreated" datetime="2018-09-28T11:38:20+08:00" content="2018-09-28">09-28</time></div>
-                  </header>
-                </article>
-                <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-                  <header class="post-header">
-                    <h2 class="post-title"><a class="post-title-link" href="/hello/dynamic-proxy.html" itemprop="url"><span itemprop="name">【Hello】动态代理</span></a></h2>
-                    <div class="post-meta"><time class="post-time" itemprop="dateCreated" datetime="2018-09-27T14:38:50+08:00" content="2018-09-27">09-27</time></div>
-                  </header>
-                </article>
-                <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-                  <header class="post-header">
-                    <h2 class="post-title"><a class="post-title-link" href="/hello/thread.html" itemprop="url"><span itemprop="name">【Hello】线程</span></a></h2>
-                    <div class="post-meta"><time class="post-time" itemprop="dateCreated" datetime="2018-09-26T19:56:56+08:00" content="2018-09-26">09-26</time></div>
-                  </header>
-                </article>
-              </div>
+              </article>
             </div>
           </div>
         </div>
@@ -203,7 +199,11 @@
         </div>
         <aside id="sidebar" class="sidebar">
           <div class="sidebar-inner">
-            <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+            <ul class="sidebar-nav motion-element">
+              <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">文章目录</li>
+              <li class="sidebar-nav-overview" data-target="site-overview-wrap">站点概览</li>
+            </ul>
+            <section class="site-overview-wrap sidebar-panel">
               <div class="site-overview">
                 <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person"><img class="site-author-image" itemprop="image" src="/images/avatar.gif" alt="LeifChen">
                   <p class="site-author-name" itemprop="name">LeifChen</p>
@@ -216,6 +216,21 @@
                 </nav>
                 <div class="feed-link motion-element"><a href="/atom.xml" rel="alternate"><i class="fa fa-rss"></i> RSS</a></div>
                 <div class="links-of-author motion-element"><span class="links-of-author-item"><a href="https://github.com/leifchen" target="_blank" title="GitHub"><i class="fa fa-fw fa-github"></i>GitHub</a> </span><span class="links-of-author-item"><a href="mailto:lefengchen@163.com" target="_blank" title="E-Mail"><i class="fa fa-fw fa-envelope"></i>E-Mail</a></span></div>
+              </div>
+            </section>
+            <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+              <div class="post-toc">
+                <div class="post-toc-content">
+                  <ol class="nav">
+                    <li class="nav-item nav-level-1"><a class="nav-link" href="#链表"><span class="nav-text">链表</span></a>
+                      <ol class="nav-child">
+                        <li class="nav-item nav-level-2"><a class="nav-link" href="#添加操作"><span class="nav-text">添加操作</span></a></li>
+                        <li class="nav-item nav-level-2"><a class="nav-link" href="#删除操作"><span class="nav-text">删除操作</span></a></li>
+                        <li class="nav-item nav-level-2"><a class="nav-link" href="#参考"><span class="nav-text">参考</span></a></li>
+                      </ol>
+                    </li>
+                  </ol>
+                </div>
               </div>
             </section>
           </div>
@@ -244,6 +259,8 @@
   <script type="text/javascript" src="/js/src/motion.js?v=6.4.1"></script>
   <script type="text/javascript" src="/js/src/affix.js?v=6.4.1"></script>
   <script type="text/javascript" src="/js/src/schemes/pisces.js?v=6.4.1"></script>
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=6.4.1"></script>
+  <script type="text/javascript" src="/js/src/post-details.js?v=6.4.1"></script>
   <script type="text/javascript" src="/js/src/bootstrap.js?v=6.4.1"></script>
   <script type="text/javascript">
     // Popup Window;
@@ -573,52 +590,58 @@
     });
   </script>
   <script>
-    function showTime(Counter) {
-      var entries = [];
+    function addCount(Counter) {
       var $visitors = $(".leancloud_visitors");
-
-      $visitors.each(function() {
-        entries.push($(this).attr("id").trim());
-      });
+      var url = $visitors.attr('id').trim();
+      var title = $visitors.attr('data-flag-title').trim();
 
       Counter('get', '/classes/Counter', {
           where: JSON.stringify({
-            url: {
-              "$in": entries
-            }
+            url
           })
         })
         .done(function({
           results
         }) {
-          var COUNT_CONTAINER_REF = '.leancloud-visitors-count';
+          if (results.length > 0) {
+            var counter = results[0];
 
-          if (results.length === 0) {
-            $visitors.find(COUNT_CONTAINER_REF).text(0);
-            return;
-          }
+            var $element = $(document.getElementById(url));
+            $element.find('.leancloud-visitors-count').text(counter.time + 1);
 
-          for (var i = 0; i < results.length; i++) {
-            var item = results[i];
-            var url = item.url;
-            var time = item.time;
-            var element = document.getElementById(url);
+            Counter('put', `/classes/Counter/${counter.objectId}`, JSON.stringify({
+                time: {
+                  "__op": "Increment",
+                  "amount": 1
+                }
+              }))
 
-            $(element).find(COUNT_CONTAINER_REF).text(time);
-          }
-          for (var i = 0; i < entries.length; i++) {
-            var url = entries[i];
-            var element = document.getElementById(url);
-            var countSpan = $(element).find(COUNT_CONTAINER_REF);
-            if (countSpan.text() == '') {
-              countSpan.text(0);
-            }
+              .fail(function({
+                responseJSON
+              }) {
+                console.log('Failed to save Visitor num, with error message: ' + responseJSON.error);
+              })
+          } else {
+
+            Counter('post', '/classes/Counter', JSON.stringify({
+                title: title,
+                url: url,
+                time: 1
+              }))
+              .done(function() {
+                var $element = $(document.getElementById(url));
+                $element.find('.leancloud-visitors-count').text(1);
+              })
+              .fail(function() {
+                console.log('Failed to create');
+              });
+
           }
         })
         .fail(function({
           responseJSON
         }) {
-          console.log("LeanCloud Counter Error: " + responseJSON.code + " " + responseJSON.error);
+          console.log('LeanCloud Counter Error:' + responseJSON.code + " " + responseJSON.error);
         });
     }
 
@@ -641,9 +664,7 @@
             });
           };
 
-          if ($('.post-title-link').length >= 1) {
-            showTime(Counter);
-          }
+          addCount(Counter);
 
         })
     });

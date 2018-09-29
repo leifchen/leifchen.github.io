@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://leifchen.github.io/"/>
-  <updated>2018-09-29T07:04:47.009Z</updated>
+  <updated>2018-09-29T13:45:49.658Z</updated>
   <id>http://leifchen.github.io/</id>
   
   <author>
@@ -15,6 +15,53 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>【数据结构】05-二叉树</title>
+    <link href="http://leifchen.github.io/data-structure/binary-tree.html"/>
+    <id>http://leifchen.github.io/data-structure/binary-tree.html</id>
+    <published>2018-09-29T13:23:41.000Z</published>
+    <updated>2018-09-29T13:45:49.658Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;&lt;strong&gt;介绍&lt;/strong&gt;&lt;br&gt;树是一种经常用到的数据结构，用来模拟具有树状结构性质的数据集合。树里的每一个节点有一个根植和一个包含所有子节点的列表。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;二叉树&lt;/strong&gt; 是一种更为典型的树状结构。二叉树是每个节点最多有两个子树的树结构，通常子树被称作 &lt;strong&gt;左子树&lt;/strong&gt; 和 &lt;strong&gt;右子树&lt;/strong&gt; 。&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/images/data-structure/binary-tree.jpg&quot; alt=&quot;Binary Tree&quot;&gt;&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="【数据结构】" scheme="http://leifchen.github.io/categories/data-structure/"/>
+    
+    
+      <category term="Java" scheme="http://leifchen.github.io/tags/Java/"/>
+    
+      <category term="Tree" scheme="http://leifchen.github.io/tags/Tree/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>【数据结构】04-链表</title>
+    <link href="http://leifchen.github.io/data-structure/linked-list.html"/>
+    <id>http://leifchen.github.io/data-structure/linked-list.html</id>
+    <published>2018-09-29T12:33:57.000Z</published>
+    <updated>2018-09-29T13:15:23.588Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;&lt;strong&gt;介绍&lt;/strong&gt;&lt;br&gt;链表与数组相似，也是一种线性数据结构。链表中的每个结点不仅包含值，还包含链接到下一个结点的引用字段。&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/images/data-structure/linked-list.png&quot; alt=&quot;Linked List&quot;&gt;&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="【数据结构】" scheme="http://leifchen.github.io/categories/data-structure/"/>
+    
+    
+      <category term="Java" scheme="http://leifchen.github.io/tags/Java/"/>
+    
+      <category term="Linked List" scheme="http://leifchen.github.io/tags/Linked-List/"/>
+    
+  </entry>
   
   <entry>
     <title>【数据结构】03-栈</title>
