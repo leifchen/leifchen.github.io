@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://leifchen.github.io/"/>
-  <updated>2018-09-28T12:34:05.784Z</updated>
+  <updated>2018-09-29T03:59:01.372Z</updated>
   <id>http://leifchen.github.io/</id>
   
   <author>
@@ -17,11 +17,33 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>【数据结构】01.数组</title>
+    <link href="http://leifchen.github.io/data-structure/array.html"/>
+    <id>http://leifchen.github.io/data-structure/array.html</id>
+    <published>2018-09-29T01:47:55.000Z</published>
+    <updated>2018-09-29T03:59:01.372Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;&lt;strong&gt;介绍&lt;/strong&gt;&lt;br&gt;数组是一种基本的数据结构，用于按顺序存储元素的集合。支持随机访问，可以快速查询。&lt;br&gt;&lt;img src=&quot;/images/array/array.png&quot; alt=&quot;Array&quot;&gt;&lt;br&gt;
+    
+    </summary>
+    
+      <category term="【数据结构】" scheme="http://leifchen.github.io/categories/data-structure/"/>
+    
+    
+      <category term="Java" scheme="http://leifchen.github.io/tags/Java/"/>
+    
+      <category term="Array" scheme="http://leifchen.github.io/tags/Array/"/>
+    
+  </entry>
+  
+  <entry>
     <title>【Hello】反射</title>
     <link href="http://leifchen.github.io/hello/reflect.html"/>
     <id>http://leifchen.github.io/hello/reflect.html</id>
     <published>2018-09-28T03:38:20.000Z</published>
-    <updated>2018-09-28T12:34:05.784Z</updated>
+    <updated>2018-09-28T12:37:49.560Z</updated>
     
     <summary type="html">
     
@@ -32,7 +54,7 @@
       <category term="【Hello】系列" scheme="http://leifchen.github.io/categories/hello/"/>
     
     
-      <category term="java" scheme="http://leifchen.github.io/tags/java/"/>
+      <category term="Java" scheme="http://leifchen.github.io/tags/Java/"/>
     
       <category term="反射" scheme="http://leifchen.github.io/tags/%E5%8F%8D%E5%B0%84/"/>
     
@@ -47,9 +69,7 @@
     
     <summary type="html">
     
-      &lt;p&gt;&lt;strong&gt;介绍&lt;/strong&gt;&lt;br&gt;Spring AOP 的底层实现有两种方式：一种是 JDK 动态代理，另一种是 CGLib 动态代理。&lt;br&gt;JDK 动态代理主要涉及 &lt;code&gt;java.lang.reflect&lt;/code&gt; 包下边的两个类：&lt;code&gt;Proxy&lt;/code&gt; 和 &lt;code&gt;InvocationHandler&lt;/code&gt; 。其中 &lt;code&gt;InvocationHandler&lt;/code&gt; 是一个接口，可以通过实现该接口定义横切逻辑，并通过反射机制调用目标类的代码，动态地将横切逻辑和业务逻辑编织在一起。&lt;/p&gt;
-&lt;p&gt;JDK 动态代理的限制，是它只能为接口创建代理实例。对于没有通过接口定义业务方法的类，只能通过 CGLib 创建动态代理实例。&lt;/p&gt;
-&lt;p&gt;CGLib 动态代理采用底层的字节码技术，全称是 Code Generation Library ，CGLib 可以为一个类创建一个子类，在子类中采用方法拦截的技术拦截所有父类方法的调用并顺势织入横切逻辑。&lt;br&gt;
+      &lt;p&gt;&lt;strong&gt;介绍&lt;/strong&gt;&lt;br&gt;Spring AOP 的底层实现有两种方式：一种是 JDK 动态代理，另一种是 CGLib 动态代理。&lt;br&gt;JDK 动态代理主要涉及 &lt;code&gt;java.lang.reflect&lt;/code&gt; 包下边的两个类：&lt;code&gt;Proxy&lt;/code&gt; 和 &lt;code&gt;InvocationHandler&lt;/code&gt; 。其中 &lt;code&gt;InvocationHandler&lt;/code&gt; 是一个接口，可以通过实现该接口定义横切逻辑，并通过反射机制调用目标类的代码，动态地将横切逻辑和业务逻辑编织在一起。&lt;/p&gt;&lt;p&gt;JDK 动态代理的限制，是它只能为接口创建代理实例。对于没有通过接口定义业务方法的类，只能通过 CGLib 创建动态代理实例。&lt;/p&gt;&lt;p&gt;CGLib 动态代理采用底层的字节码技术，全称是 Code Generation Library ，CGLib 可以为一个类创建一个子类，在子类中采用方法拦截的技术拦截所有父类方法的调用并顺势织入横切逻辑。&lt;br&gt;
     
     </summary>
     
