@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://leifchen.github.io/"/>
-  <updated>2018-09-29T03:59:01.372Z</updated>
+  <updated>2018-09-29T07:04:47.009Z</updated>
   <id>http://leifchen.github.io/</id>
   
   <author>
@@ -17,15 +17,59 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>【数据结构】03-栈</title>
+    <link href="http://leifchen.github.io/data-structure/stack.html"/>
+    <id>http://leifchen.github.io/data-structure/stack.html</id>
+    <published>2018-09-29T06:08:00.000Z</published>
+    <updated>2018-09-29T07:04:47.009Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;&lt;strong&gt;介绍&lt;/strong&gt;&lt;br&gt;栈是一种”&lt;strong&gt;后进先出（LIFO）&lt;/strong&gt;“的数据结构。插入操作也称作&lt;strong&gt;入栈（push）&lt;/strong&gt;，在堆栈的顶部添加一个新元素；删除操作也称作&lt;strong&gt;出栈（pop）&lt;/strong&gt;，移除堆栈的栈顶元素。&lt;br&gt;&lt;img src=&quot;/images/data-structure/stack.png&quot; alt=&quot;Stack&quot;&gt;&lt;br&gt;
+    
+    </summary>
+    
+      <category term="【数据结构】" scheme="http://leifchen.github.io/categories/data-structure/"/>
+    
+    
+      <category term="Java" scheme="http://leifchen.github.io/tags/Java/"/>
+    
+      <category term="Stack" scheme="http://leifchen.github.io/tags/Stack/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>【数据结构】02-队列</title>
+    <link href="http://leifchen.github.io/data-structure/queue.html"/>
+    <id>http://leifchen.github.io/data-structure/queue.html</id>
+    <published>2018-09-29T06:05:51.000Z</published>
+    <updated>2018-09-29T06:59:41.767Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;&lt;strong&gt;介绍&lt;/strong&gt;&lt;br&gt;队列是一种”&lt;strong&gt;先进先出（FIFO）&lt;/strong&gt;“的线性数据结构。插入操作也称作&lt;strong&gt;入队（enqueue）&lt;/strong&gt;，新元素始终被添加在队列的末尾。 删除操作也被称为&lt;strong&gt;出队（dequeue）&lt;/strong&gt;，只能移除第一个元素。&lt;br&gt;&lt;img src=&quot;/images/data-structure/queue.png&quot; alt=&quot;Queue&quot;&gt;&lt;br&gt;
+    
+    </summary>
+    
+      <category term="【数据结构】" scheme="http://leifchen.github.io/categories/data-structure/"/>
+    
+    
+      <category term="Java" scheme="http://leifchen.github.io/tags/Java/"/>
+    
+      <category term="Queue" scheme="http://leifchen.github.io/tags/Queue/"/>
+    
+  </entry>
+  
+  <entry>
     <title>【数据结构】01.数组</title>
     <link href="http://leifchen.github.io/data-structure/array.html"/>
     <id>http://leifchen.github.io/data-structure/array.html</id>
     <published>2018-09-29T01:47:55.000Z</published>
-    <updated>2018-09-29T03:59:01.372Z</updated>
+    <updated>2018-09-29T06:12:58.954Z</updated>
     
     <summary type="html">
     
-      &lt;p&gt;&lt;strong&gt;介绍&lt;/strong&gt;&lt;br&gt;数组是一种基本的数据结构，用于按顺序存储元素的集合。支持随机访问，可以快速查询。&lt;br&gt;&lt;img src=&quot;/images/array/array.png&quot; alt=&quot;Array&quot;&gt;&lt;br&gt;
+      &lt;p&gt;&lt;strong&gt;介绍&lt;/strong&gt;&lt;br&gt;数组是一种基本的数据结构，用于按顺序存储元素的集合。支持随机访问，可以快速查询。&lt;br&gt;&lt;img src=&quot;/images/data-structure/array.png&quot; alt=&quot;Array&quot;&gt;&lt;br&gt;
     
     </summary>
     
@@ -69,7 +113,9 @@
     
     <summary type="html">
     
-      &lt;p&gt;&lt;strong&gt;介绍&lt;/strong&gt;&lt;br&gt;Spring AOP 的底层实现有两种方式：一种是 JDK 动态代理，另一种是 CGLib 动态代理。&lt;br&gt;JDK 动态代理主要涉及 &lt;code&gt;java.lang.reflect&lt;/code&gt; 包下边的两个类：&lt;code&gt;Proxy&lt;/code&gt; 和 &lt;code&gt;InvocationHandler&lt;/code&gt; 。其中 &lt;code&gt;InvocationHandler&lt;/code&gt; 是一个接口，可以通过实现该接口定义横切逻辑，并通过反射机制调用目标类的代码，动态地将横切逻辑和业务逻辑编织在一起。&lt;/p&gt;&lt;p&gt;JDK 动态代理的限制，是它只能为接口创建代理实例。对于没有通过接口定义业务方法的类，只能通过 CGLib 创建动态代理实例。&lt;/p&gt;&lt;p&gt;CGLib 动态代理采用底层的字节码技术，全称是 Code Generation Library ，CGLib 可以为一个类创建一个子类，在子类中采用方法拦截的技术拦截所有父类方法的调用并顺势织入横切逻辑。&lt;br&gt;
+      &lt;p&gt;&lt;strong&gt;介绍&lt;/strong&gt;&lt;br&gt;Spring AOP 的底层实现有两种方式：一种是 JDK 动态代理，另一种是 CGLib 动态代理。&lt;br&gt;JDK 动态代理主要涉及 &lt;code&gt;java.lang.reflect&lt;/code&gt; 包下边的两个类：&lt;code&gt;Proxy&lt;/code&gt; 和 &lt;code&gt;InvocationHandler&lt;/code&gt; 。其中 &lt;code&gt;InvocationHandler&lt;/code&gt; 是一个接口，可以通过实现该接口定义横切逻辑，并通过反射机制调用目标类的代码，动态地将横切逻辑和业务逻辑编织在一起。&lt;/p&gt;
+&lt;p&gt;JDK 动态代理的限制，是它只能为接口创建代理实例。对于没有通过接口定义业务方法的类，只能通过 CGLib 创建动态代理实例。&lt;/p&gt;
+&lt;p&gt;CGLib 动态代理采用底层的字节码技术，全称是 Code Generation Library ，CGLib 可以为一个类创建一个子类，在子类中采用方法拦截的技术拦截所有父类方法的调用并顺势织入横切逻辑。&lt;br&gt;
     
     </summary>
     

@@ -58,30 +58,28 @@
         }
       }
   </script>
-  <meta name="description" content="介绍ElasticSearch 是一个基于 Lucene 的搜索服务器。它提供了一个分布式多用户能力的全文搜索引擎，基于 RESTful web 接口。">
-  <meta name="keywords" content="Elastic Search">
+  <meta name="description" content="介绍队列是一种”先进先出（FIFO）“的线性数据结构。插入操作也称作入队（enqueue），新元素始终被添加在队列的末尾。 删除操作也被称为出队（dequeue），只能移除第一个元素。">
+  <meta name="keywords" content="Java,Queue">
   <meta property="og:type" content="article">
-  <meta property="og:title" content="【Hello】ElasticSearch">
-  <meta property="og:url" content="http://leifchen.github.io/hello/elastic-search.html">
+  <meta property="og:title" content="【数据结构】02-队列">
+  <meta property="og:url" content="http://leifchen.github.io/data-structure/queue.html">
   <meta property="og:site_name" content="LeifChen">
-  <meta property="og:description" content="介绍ElasticSearch 是一个基于 Lucene 的搜索服务器。它提供了一个分布式多用户能力的全文搜索引擎，基于 RESTful web 接口。">
+  <meta property="og:description" content="介绍队列是一种”先进先出（FIFO）“的线性数据结构。插入操作也称作入队（enqueue），新元素始终被添加在队列的末尾。 删除操作也被称为出队（dequeue），只能移除第一个元素。">
   <meta property="og:locale" content="zh-CN">
-  <meta property="og:image" content="http://leifchen.github.io/images/elastic-search/elasticsearch.png">
-  <meta property="og:image" content="http://leifchen.github.io/images/elastic-search/elasticsearch-head-1.png">
-  <meta property="og:image" content="http://leifchen.github.io/images/elastic-search/elasticsearch-head-2.png">
-  <meta property="og:updated_time" content="2018-09-28T03:39:45.854Z">
+  <meta property="og:image" content="http://leifchen.github.io/images/data-structure/queue.png">
+  <meta property="og:updated_time" content="2018-09-29T06:59:41.767Z">
   <meta name="twitter:card" content="summary">
-  <meta name="twitter:title" content="【Hello】ElasticSearch">
-  <meta name="twitter:description" content="介绍ElasticSearch 是一个基于 Lucene 的搜索服务器。它提供了一个分布式多用户能力的全文搜索引擎，基于 RESTful web 接口。">
-  <meta name="twitter:image" content="http://leifchen.github.io/images/elastic-search/elasticsearch.png">
+  <meta name="twitter:title" content="【数据结构】02-队列">
+  <meta name="twitter:description" content="介绍队列是一种”先进先出（FIFO）“的线性数据结构。插入操作也称作入队（enqueue），新元素始终被添加在队列的末尾。 删除操作也被称为出队（dequeue），只能移除第一个元素。">
+  <meta name="twitter:image" content="http://leifchen.github.io/images/data-structure/queue.png">
   <link rel="alternate" href="/atom.xml" title="LeifChen" type="application/atom+xml">
-  <link rel="canonical" href="http://leifchen.github.io/hello/elastic-search.html">
+  <link rel="canonical" href="http://leifchen.github.io/data-structure/queue.html">
   <script type="text/javascript" id="page.configurations">
     CONFIG.page = {
       sidebar: ""
     }
   </script>
-  <title>【Hello】ElasticSearch | LeifChen</title><noscript>
+  <title>【数据结构】02-队列 | LeifChen</title><noscript>
     <style type="text/css">
       .sidebar-inner,
       .use-motion .brand,
@@ -149,44 +147,70 @@
             <div id="posts" class="posts-expand">
               <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
                 <div class="post-block">
-                  <link itemprop="mainEntityOfPage" href="http://leifchen.github.io/hello/elastic-search.html"><span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+                  <link itemprop="mainEntityOfPage" href="http://leifchen.github.io/data-structure/queue.html"><span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
                     <meta itemprop="name" content="LeifChen">
                     <meta itemprop="description" content="Java开发">
                     <meta itemprop="image" content="/images/avatar.gif"></span><span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
                     <meta itemprop="name" content="LeifChen"></span>
                   <header class="post-header">
-                    <h1 class="post-title" itemprop="name headline">【Hello】ElasticSearch</h1>
-                    <div class="post-meta"><span class="post-time"><span class="post-meta-item-icon"><i class="fa fa-calendar-o"></i> </span><span class="post-meta-item-text">发表于</span> <time title="创建时间：2018-09-18 17:22:00" itemprop="dateCreated datePublished" datetime="2018-09-18T17:22:00+08:00">2018-09-18</time> </span><span class="post-category"><span class="post-meta-divider">|</span> <span class="post-meta-item-icon"><i class="fa fa-folder-o"></i> </span><span class="post-meta-item-text">分类于</span> <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/hello/" itemprop="url" rel="index"><span itemprop="name">【Hello】系列</span></a></span> </span><span id="/hello/elastic-search.html" class="leancloud_visitors" data-flag-title="【Hello】ElasticSearch"><span class="post-meta-divider">|</span> <span class="post-meta-item-icon"><i class="fa fa-eye"></i> </span><span class="post-meta-item-text">阅读次数：</span> <span class="leancloud-visitors-count"></span></span></div>
+                    <h1 class="post-title" itemprop="name headline">【数据结构】02-队列</h1>
+                    <div class="post-meta"><span class="post-time"><span class="post-meta-item-icon"><i class="fa fa-calendar-o"></i> </span><span class="post-meta-item-text">发表于</span> <time title="创建时间：2018-09-29 14:05:51" itemprop="dateCreated datePublished" datetime="2018-09-29T14:05:51+08:00">2018-09-29</time> </span><span class="post-category"><span class="post-meta-divider">|</span> <span class="post-meta-item-icon"><i class="fa fa-folder-o"></i> </span><span class="post-meta-item-text">分类于</span> <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/data-structure/" itemprop="url" rel="index"><span itemprop="name">【数据结构】</span></a></span> </span><span id="/data-structure/queue.html" class="leancloud_visitors" data-flag-title="【数据结构】02-队列"><span class="post-meta-divider">|</span> <span class="post-meta-item-icon"><i class="fa fa-eye"></i> </span><span class="post-meta-item-text">阅读次数：</span> <span class="leancloud-visitors-count"></span></span></div>
                   </header>
                   <div class="post-body" itemprop="articleBody">
-                    <p><strong>介绍</strong><br>ElasticSearch 是一个基于 Lucene 的搜索服务器。它提供了一个分布式多用户能力的全文搜索引擎，基于 RESTful web 接口。<br><a id="more"></a></p>
-                    <h1 id="ElasticSearch"><a href="#ElasticSearch" class="headerlink" title="ElasticSearch"></a>ElasticSearch</h1>
-                    <p>介绍 Elastic Search ，包括安装、插件、配置。</p>
-                    <h2 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h2>
-                    <p>到<a href="https://www.elastic.co/cn/products/elasticsearch" target="_blank" rel="noopener">官网</a>下载 ElasticSearch 并解压，然后运行 bin/elasticsearch (or bin\elasticsearch.bat on Windows)，在浏览器打开 <code>http://localhost:9200/</code> 查看是否运行。</p>
-                    <p><img src="/images/elastic-search/elasticsearch.png" alt="elasticsearch"></p>
-                    <h2 id="可视化插件"><a href="#可视化插件" class="headerlink" title="可视化插件"></a>可视化插件</h2>
-                    <p><a href="https://github.com/mobz/elasticsearch-head" target="_blank" rel="noopener">mobz/elasticsearch-head</a></p>
-                    <p>根据 README 的安装步骤；</p>
-                    <ol>
-                      <li>git clone git://github.com/mobz/elasticsearch-head.git</li>
-                      <li>cd elasticsearch-head</li>
-                      <li>npm install</li>
-                      <li>npm run start</li>
-                      <li>open <code>http://localhost:9100/</code></li>
-                    </ol>
-                    <p>未连接 ElasticSearch 时：</p>
-                    <p><img src="/images/elastic-search/elasticsearch-head-1.png" alt="elasticsearch-head-1"></p>
-                    <p>已连接 ElasticSearch 时：</p>
-                    <p><img src="/images/elastic-search/elasticsearch-head-2.png" alt="elasticsearch-head-2"></p>
-                    <h2 id="与SpringBoot集成"><a href="#与SpringBoot集成" class="headerlink" title="与SpringBoot集成"></a>与SpringBoot集成</h2>
-                    <p>通过 Gradle 构建，添加 ElasticSearch 依赖项时，同时需要引进相关插件 transport-netty3-client 依赖项。</p>
+                    <p><strong>介绍</strong><br>队列是一种”<strong>先进先出（FIFO）</strong>“的线性数据结构。插入操作也称作<strong>入队（enqueue）</strong>，新元素始终被添加在队列的末尾。 删除操作也被称为<strong>出队（dequeue）</strong>，只能移除第一个元素。<br><img src="/images/data-structure/queue.png" alt="Queue"><br><a id="more"></a></p>
+                    <h1 id="队列"><a href="#队列" class="headerlink" title="队列"></a>队列</h1>
+                    <h2 id="基本操作"><a href="#基本操作" class="headerlink" title="基本操作"></a>基本操作</h2>
+                    <figure class="highlight java">
+                      <table>
+                        <tr>
+                          <td class="gutter">
+                            <pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre>
+                          </td>
+                          <td class="code">
+                            <pre><span class="line">Queue&lt;Integer&gt; queue = <span class="keyword">new</span> LinkedList&lt;&gt;();</span><br><span class="line"></span><br><span class="line"><span class="comment">// 入队：1-&gt;2-&gt;3</span></span><br><span class="line">queue.offer(<span class="number">1</span>);</span><br><span class="line">queue.offer(<span class="number">2</span>);</span><br><span class="line">queue.offer(<span class="number">3</span>);</span><br><span class="line"></span><br><span class="line"><span class="comment">// 查看队首元素：1</span></span><br><span class="line">queue.peek();</span><br><span class="line"></span><br><span class="line"><span class="comment">// 出队：1</span></span><br><span class="line">queue.poll();</span><br></pre>
+                          </td>
+                        </tr>
+                      </table>
+                    </figure>
+                    <h2 id="循环队列"><a href="#循环队列" class="headerlink" title="循环队列"></a>循环队列</h2>
+                    <p>循环队列通过使用一个数组和两个指针（head 和 tail）。 head 表示队列的起始位置，tail 表示队列的结束位置。</p>
+                    <p><strong><em>Code</em></strong></p>
+                    <ul>
+                      <li>Queue.java 接口</li>
+                    </ul>
+                    <figure class="highlight java">
+                      <table>
+                        <tr>
+                          <td class="gutter">
+                            <pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br></pre>
+                          </td>
+                          <td class="code">
+                            <pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">interface</span> <span class="title">Queue</span>&lt;<span class="title">E</span>&gt; </span>&#123;</span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">     * 获取队列的长度</span></span><br><span class="line"><span class="comment">     *</span></span><br><span class="line"><span class="comment">     * <span class="doctag">@return</span></span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line">    <span class="function"><span class="keyword">int</span> <span class="title">getSize</span><span class="params">()</span></span>;</span><br><span class="line"></span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">     * 返回是否空队列</span></span><br><span class="line"><span class="comment">     *</span></span><br><span class="line"><span class="comment">     * <span class="doctag">@return</span></span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line">    <span class="function"><span class="keyword">boolean</span> <span class="title">isEmpty</span><span class="params">()</span></span>;</span><br><span class="line"></span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">     * 从队尾添加一个元素e</span></span><br><span class="line"><span class="comment">     *</span></span><br><span class="line"><span class="comment">     * <span class="doctag">@param</span> e</span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line">    <span class="function"><span class="keyword">void</span> <span class="title">enqueue</span><span class="params">(E e)</span></span>;</span><br><span class="line"></span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">     * 从队首取出一个元素</span></span><br><span class="line"><span class="comment">     *</span></span><br><span class="line"><span class="comment">     * <span class="doctag">@return</span></span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line">    <span class="function">E <span class="title">dequeue</span><span class="params">()</span></span>;</span><br><span class="line"></span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">     * 返回队首元素</span></span><br><span class="line"><span class="comment">     *</span></span><br><span class="line"><span class="comment">     * <span class="doctag">@return</span></span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line">    <span class="function">E <span class="title">getFront</span><span class="params">()</span></span>;</span><br><span class="line">&#125;</span><br></pre>
+                          </td>
+                        </tr>
+                      </table>
+                    </figure>
+                    <ul>
+                      <li>LoopQueue.java 实现类</li>
+                    </ul>
+                    <figure class="highlight java">
+                      <table>
+                        <tr>
+                          <td class="gutter">
+                            <pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br></pre>
+                          </td>
+                          <td class="code">
+                            <pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">LoopQueue</span>&lt;<span class="title">E</span>&gt; <span class="keyword">implements</span> <span class="title">Queue</span>&lt;<span class="title">E</span>&gt; </span>&#123;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">static</span> <span class="keyword">final</span> <span class="keyword">int</span> MOD_QUARTER = <span class="number">4</span>;</span><br><span class="line">    <span class="keyword">static</span> <span class="keyword">final</span> <span class="keyword">int</span> MOD_HALF = <span class="number">2</span>;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">private</span> E[] data;</span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">int</span> front, tail;</span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">int</span> size;</span><br><span class="line"></span><br><span class="line">    <span class="meta">@SuppressWarnings</span>(<span class="string">"unchecked"</span>)</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="title">LoopQueue</span><span class="params">(<span class="keyword">int</span> capacity)</span> </span>&#123;</span><br><span class="line">        data = (E[]) <span class="keyword">new</span> Object[capacity + <span class="number">1</span>];</span><br><span class="line">        front = <span class="number">0</span>;</span><br><span class="line">        tail = <span class="number">0</span>;</span><br><span class="line">        size = <span class="number">0</span>;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="title">LoopQueue</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        <span class="keyword">this</span>(<span class="number">10</span>);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">getCapacity</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        <span class="keyword">return</span> data.length - <span class="number">1</span>;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">getSize</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        <span class="keyword">return</span> size;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">boolean</span> <span class="title">isEmpty</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        <span class="keyword">return</span> front == tail;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">enqueue</span><span class="params">(E e)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">if</span> ((tail + <span class="number">1</span>) % data.length == front) &#123;</span><br><span class="line">            resize(getCapacity() * <span class="number">2</span>);</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        data[tail] = e;</span><br><span class="line">        tail = (tail + <span class="number">1</span>) % data.length;</span><br><span class="line">        size++;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> E <span class="title">dequeue</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        <span class="keyword">if</span> (isEmpty()) &#123;</span><br><span class="line">            <span class="keyword">throw</span> <span class="keyword">new</span> IllegalArgumentException(<span class="string">"Cannot dequeue from an empty queue."</span>);</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        E ret = data[front];</span><br><span class="line">        data[front] = <span class="keyword">null</span>;</span><br><span class="line">        front = (front + <span class="number">1</span>) % data.length;</span><br><span class="line">        size--;</span><br><span class="line">        <span class="keyword">if</span> (size == getCapacity() / MOD_QUARTER &amp;&amp; getCapacity() / MOD_HALF != <span class="number">0</span>) &#123;</span><br><span class="line">            resize(getCapacity() / MOD_HALF);</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        <span class="keyword">return</span> ret;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> E <span class="title">getFront</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        <span class="keyword">if</span> (isEmpty()) &#123;</span><br><span class="line">            <span class="keyword">throw</span> <span class="keyword">new</span> IllegalArgumentException(<span class="string">"Cannot dequeue from an empty queue."</span>);</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        <span class="keyword">return</span> data[front];</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> String <span class="title">toString</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        StringBuilder res = <span class="keyword">new</span> StringBuilder();</span><br><span class="line">        res.append(String.format(<span class="string">"Queue: size = %d , capacity = %d\n"</span>, size, getCapacity()));</span><br><span class="line">        res.append(<span class="string">"front ["</span>);</span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> i = front; i != tail; i = (i + <span class="number">1</span>) % data.length) &#123;</span><br><span class="line">            res.append(data[i]);</span><br><span class="line">            <span class="keyword">if</span> ((i + <span class="number">1</span>) % data.length != tail) &#123;</span><br><span class="line">                res.append(<span class="string">", "</span>);</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        res.append(<span class="string">"] tail"</span>);</span><br><span class="line">        <span class="keyword">return</span> res.toString();</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="meta">@SuppressWarnings</span>(<span class="string">"unchecked"</span>)</span><br><span class="line">    <span class="function"><span class="keyword">private</span> <span class="keyword">void</span> <span class="title">resize</span><span class="params">(<span class="keyword">int</span> newCapacity)</span> </span>&#123;</span><br><span class="line">        E[] newData = (E[]) <span class="keyword">new</span> Object[newCapacity + <span class="number">1</span>];</span><br><span class="line">        System.arraycopy(data, front, newData, <span class="number">0</span>, size);</span><br><span class="line">        data = newData;</span><br><span class="line">        front = <span class="number">0</span>;</span><br><span class="line">        tail = size;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre>
+                          </td>
+                        </tr>
+                      </table>
+                    </figure>
                   </div>
                   <footer class="post-footer">
-                    <div class="post-tags"><a href="/tags/Elastic-Search/" rel="tag"># Elastic Search</a></div>
+                    <div class="post-tags"><a href="/tags/Java/" rel="tag"># Java</a> <a href="/tags/Queue/" rel="tag"># Queue</a></div>
                     <div class="post-nav">
-                      <div class="post-nav-next post-nav-item"><a href="/hello/hexo.html" rel="next" title="【Hello】Hexo"><i class="fa fa-chevron-left"></i> 【Hello】Hexo</a></div><span class="post-nav-divider"></span>
-                      <div class="post-nav-prev post-nav-item"><a href="/hello/thread.html" rel="prev" title="【Hello】线程">【Hello】线程 <i class="fa fa-chevron-right"></i></a></div>
+                      <div class="post-nav-next post-nav-item"><a href="/data-structure/array.html" rel="next" title="【数据结构】01.数组"><i class="fa fa-chevron-left"></i> 【数据结构】01.数组</a></div><span class="post-nav-divider"></span>
+                      <div class="post-nav-prev post-nav-item"><a href="/data-structure/stack.html" rel="prev" title="【数据结构】03-栈">【数据结构】03-栈 <i class="fa fa-chevron-right"></i></a></div>
                     </div>
                   </footer>
                 </div>
@@ -222,11 +246,10 @@
               <div class="post-toc">
                 <div class="post-toc-content">
                   <ol class="nav">
-                    <li class="nav-item nav-level-1"><a class="nav-link" href="#ElasticSearch"><span class="nav-text">ElasticSearch</span></a>
+                    <li class="nav-item nav-level-1"><a class="nav-link" href="#队列"><span class="nav-text">队列</span></a>
                       <ol class="nav-child">
-                        <li class="nav-item nav-level-2"><a class="nav-link" href="#安装"><span class="nav-text">安装</span></a></li>
-                        <li class="nav-item nav-level-2"><a class="nav-link" href="#可视化插件"><span class="nav-text">可视化插件</span></a></li>
-                        <li class="nav-item nav-level-2"><a class="nav-link" href="#与SpringBoot集成"><span class="nav-text">与SpringBoot集成</span></a></li>
+                        <li class="nav-item nav-level-2"><a class="nav-link" href="#基本操作"><span class="nav-text">基本操作</span></a></li>
+                        <li class="nav-item nav-level-2"><a class="nav-link" href="#循环队列"><span class="nav-text">循环队列</span></a></li>
                       </ol>
                     </li>
                   </ol>
