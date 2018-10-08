@@ -25,9 +25,7 @@
     
     <summary type="html">
     
-      &lt;p&gt;&lt;strong&gt;介绍&lt;/strong&gt;&lt;br&gt;树是一种经常用到的数据结构，用来模拟具有树状结构性质的数据集合。树里的每一个节点有一个根植和一个包含所有子节点的列表。&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;二叉树&lt;/strong&gt; 是一种更为典型的树状结构。二叉树是每个节点最多有两个子树的树结构，通常子树被称作 &lt;strong&gt;左子树&lt;/strong&gt; 和 &lt;strong&gt;右子树&lt;/strong&gt; 。&lt;/p&gt;
-&lt;p&gt;&lt;img src=&quot;/images/data-structure/binary-tree.jpg&quot; alt=&quot;Binary Tree&quot;&gt;&lt;/p&gt;
+      &lt;p&gt;&lt;strong&gt;介绍&lt;/strong&gt;&lt;br&gt;树是一种经常用到的数据结构，用来模拟具有树状结构性质的数据集合。树里的每一个节点有一个根植和一个包含所有子节点的列表。&lt;/p&gt;&lt;p&gt;&lt;strong&gt;二叉树&lt;/strong&gt; 是一种更为典型的树状结构。二叉树是每个节点最多有两个子树的树结构，通常子树被称作 &lt;strong&gt;左子树&lt;/strong&gt; 和 &lt;strong&gt;右子树&lt;/strong&gt; 。&lt;/p&gt;&lt;p&gt;&lt;img src=&quot;/images/data-structure/binary-tree.jpg&quot; alt=&quot;Binary Tree&quot;&gt;&lt;/p&gt;
     
     </summary>
     
@@ -49,8 +47,7 @@
     
     <summary type="html">
     
-      &lt;p&gt;&lt;strong&gt;介绍&lt;/strong&gt;&lt;br&gt;链表与数组相似，也是一种线性数据结构。链表中的每个结点不仅包含值，还包含链接到下一个结点的引用字段。&lt;/p&gt;
-&lt;p&gt;&lt;img src=&quot;/images/data-structure/linked-list.png&quot; alt=&quot;Linked List&quot;&gt;&lt;/p&gt;
+      &lt;p&gt;&lt;strong&gt;介绍&lt;/strong&gt;&lt;br&gt;链表与数组相似，也是一种线性数据结构。链表中的每个结点不仅包含值，还包含链接到下一个结点的引用字段。&lt;/p&gt;&lt;p&gt;&lt;img src=&quot;/images/data-structure/linked-list.png&quot; alt=&quot;Linked List&quot;&gt;&lt;/p&gt;
     
     </summary>
     
@@ -160,9 +157,7 @@
     
     <summary type="html">
     
-      &lt;p&gt;&lt;strong&gt;介绍&lt;/strong&gt;&lt;br&gt;Spring AOP 的底层实现有两种方式：一种是 JDK 动态代理，另一种是 CGLib 动态代理。&lt;br&gt;JDK 动态代理主要涉及 &lt;code&gt;java.lang.reflect&lt;/code&gt; 包下边的两个类：&lt;code&gt;Proxy&lt;/code&gt; 和 &lt;code&gt;InvocationHandler&lt;/code&gt; 。其中 &lt;code&gt;InvocationHandler&lt;/code&gt; 是一个接口，可以通过实现该接口定义横切逻辑，并通过反射机制调用目标类的代码，动态地将横切逻辑和业务逻辑编织在一起。&lt;/p&gt;
-&lt;p&gt;JDK 动态代理的限制，是它只能为接口创建代理实例。对于没有通过接口定义业务方法的类，只能通过 CGLib 创建动态代理实例。&lt;/p&gt;
-&lt;p&gt;CGLib 动态代理采用底层的字节码技术，全称是 Code Generation Library ，CGLib 可以为一个类创建一个子类，在子类中采用方法拦截的技术拦截所有父类方法的调用并顺势织入横切逻辑。&lt;br&gt;
+      &lt;p&gt;&lt;strong&gt;介绍&lt;/strong&gt;&lt;br&gt;Spring AOP 的底层实现有两种方式：一种是 JDK 动态代理，另一种是 CGLib 动态代理。&lt;br&gt;JDK 动态代理主要涉及 &lt;code&gt;java.lang.reflect&lt;/code&gt; 包下边的两个类：&lt;code&gt;Proxy&lt;/code&gt; 和 &lt;code&gt;InvocationHandler&lt;/code&gt; 。其中 &lt;code&gt;InvocationHandler&lt;/code&gt; 是一个接口，可以通过实现该接口定义横切逻辑，并通过反射机制调用目标类的代码，动态地将横切逻辑和业务逻辑编织在一起。&lt;/p&gt;&lt;p&gt;JDK 动态代理的限制，是它只能为接口创建代理实例。对于没有通过接口定义业务方法的类，只能通过 CGLib 创建动态代理实例。&lt;/p&gt;&lt;p&gt;CGLib 动态代理采用底层的字节码技术，全称是 Code Generation Library ，CGLib 可以为一个类创建一个子类，在子类中采用方法拦截的技术拦截所有父类方法的调用并顺势织入横切逻辑。&lt;br&gt;
     
     </summary>
     

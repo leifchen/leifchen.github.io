@@ -58,20 +58,20 @@
         }
       }
   </script>
-  <meta name="description" content="介绍Spring AOP 的底层实现有两种方式：一种是 JDK 动态代理，另一种是 CGLib 动态代理。JDK 动态代理主要涉及 java.lang.reflect 包下边的两个类：Proxy 和 InvocationHandler 。其中 InvocationHandler 是一个接口，可以通过实现该接口定义横切逻辑，并通过反射机制调用目标类的代码，动态地将横切逻辑和业务逻辑编织在一起。 JD">
+  <meta name="description" content="介绍Spring AOP 的底层实现有两种方式：一种是 JDK 动态代理，另一种是 CGLib 动态代理。JDK 动态代理主要涉及 java.lang.reflect 包下边的两个类：Proxy 和 InvocationHandler 。其中 InvocationHandler 是一个接口，可以通过实现该接口定义横切逻辑，并通过反射机制调用目标类的代码，动态地将横切逻辑和业务逻辑编织在一起。JDK">
   <meta name="keywords" content="Java,动态代理">
   <meta property="og:type" content="article">
   <meta property="og:title" content="【Hello】动态代理">
   <meta property="og:url" content="http://leifchen.github.io/hello/dynamic-proxy.html">
   <meta property="og:site_name" content="LeifChen">
-  <meta property="og:description" content="介绍Spring AOP 的底层实现有两种方式：一种是 JDK 动态代理，另一种是 CGLib 动态代理。JDK 动态代理主要涉及 java.lang.reflect 包下边的两个类：Proxy 和 InvocationHandler 。其中 InvocationHandler 是一个接口，可以通过实现该接口定义横切逻辑，并通过反射机制调用目标类的代码，动态地将横切逻辑和业务逻辑编织在一起。 JD">
+  <meta property="og:description" content="介绍Spring AOP 的底层实现有两种方式：一种是 JDK 动态代理，另一种是 CGLib 动态代理。JDK 动态代理主要涉及 java.lang.reflect 包下边的两个类：Proxy 和 InvocationHandler 。其中 InvocationHandler 是一个接口，可以通过实现该接口定义横切逻辑，并通过反射机制调用目标类的代码，动态地将横切逻辑和业务逻辑编织在一起。JDK">
   <meta property="og:locale" content="zh-CN">
   <meta property="og:image" content="http://leifchen.github.io/images/proxy/proxy-structure.jpg">
   <meta property="og:image" content="http://leifchen.github.io/images/proxy/proxy-result.jpg">
   <meta property="og:updated_time" content="2018-09-28T03:40:04.275Z">
   <meta name="twitter:card" content="summary">
   <meta name="twitter:title" content="【Hello】动态代理">
-  <meta name="twitter:description" content="介绍Spring AOP 的底层实现有两种方式：一种是 JDK 动态代理，另一种是 CGLib 动态代理。JDK 动态代理主要涉及 java.lang.reflect 包下边的两个类：Proxy 和 InvocationHandler 。其中 InvocationHandler 是一个接口，可以通过实现该接口定义横切逻辑，并通过反射机制调用目标类的代码，动态地将横切逻辑和业务逻辑编织在一起。 JD">
+  <meta name="twitter:description" content="介绍Spring AOP 的底层实现有两种方式：一种是 JDK 动态代理，另一种是 CGLib 动态代理。JDK 动态代理主要涉及 java.lang.reflect 包下边的两个类：Proxy 和 InvocationHandler 。其中 InvocationHandler 是一个接口，可以通过实现该接口定义横切逻辑，并通过反射机制调用目标类的代码，动态地将横切逻辑和业务逻辑编织在一起。JDK">
   <meta name="twitter:image" content="http://leifchen.github.io/images/proxy/proxy-structure.jpg">
   <link rel="alternate" href="/atom.xml" title="LeifChen" type="application/atom+xml">
   <link rel="canonical" href="http://leifchen.github.io/hello/dynamic-proxy.html">
@@ -346,7 +346,7 @@
         <div class="powered-by">由 <a class="theme-link" target="_blank" href="https://hexo.io">Hexo</a> 强力驱动 v3.7.1</div><span class="post-meta-divider">|</span>
         <div class="theme-info">主题 – <a class="theme-link" target="_blank" href="https://theme-next.org">NexT.Gemini</a> v6.4.1</div>
         <div>
-          <script async src="//dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script><span id="busuanzi_container_site_uv">本站访客数<span id="busuanzi_value_site_uv"></span>人次</span>
+          <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script><span id="busuanzi_container_site_uv">本站访客数<span id="busuanzi_value_site_uv"></span>人次</span>
         </div>
       </div>
     </footer>
