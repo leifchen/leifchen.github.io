@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://leifchen.github.io/"/>
-  <updated>2018-09-29T13:45:49.658Z</updated>
+  <updated>2018-10-16T03:24:52.024Z</updated>
   <id>http://leifchen.github.io/</id>
   
   <author>
@@ -15,6 +15,30 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>【Hello】Guice</title>
+    <link href="http://leifchen.github.io/hello/guice.html"/>
+    <id>http://leifchen.github.io/hello/guice.html</id>
+    <published>2018-10-16T02:20:32.000Z</published>
+    <updated>2018-10-16T03:24:52.024Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;&lt;strong&gt;介绍&lt;/strong&gt;&lt;br&gt;Guice is a &lt;strong&gt;lightweight dependency injection&lt;/strong&gt; framework for Java .&lt;br&gt;即 Guice 是轻量级依赖注入的 Java 框架。&lt;br&gt;
+    
+    </summary>
+    
+      <category term="【Hello】系列" scheme="http://leifchen.github.io/categories/hello/"/>
+    
+    
+      <category term="Java" scheme="http://leifchen.github.io/tags/Java/"/>
+    
+      <category term="Guice" scheme="http://leifchen.github.io/tags/Guice/"/>
+    
+      <category term="依赖注入" scheme="http://leifchen.github.io/tags/%E4%BE%9D%E8%B5%96%E6%B3%A8%E5%85%A5/"/>
+    
+  </entry>
   
   <entry>
     <title>【数据结构】05-二叉树</title>
